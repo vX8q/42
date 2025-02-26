@@ -3,12 +3,12 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - main  
     tags:
       - '*'  
   pull_request:
     branches:
-      - main  
+      - main
 
 jobs:
   test:
@@ -52,6 +52,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/42-docker-final:${{ github.ref_name }}
-            ${{ secrets.DOCKER_HUB_USERNAME }}/42-docker-final:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/42-docker-final:${{ github.ref_name }}
