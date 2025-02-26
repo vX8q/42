@@ -55,4 +55,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/42-docker-final:${{ github.sha }}  # Использование sha как тега
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/42-docker-final:${{ github.sha }}  
